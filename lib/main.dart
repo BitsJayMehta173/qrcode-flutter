@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'qr_view_example.dart'; // Import the QRViewExample widget
+import 'qr_view_example.dart'; 
 
 void main() {
   runApp(MyApp());
