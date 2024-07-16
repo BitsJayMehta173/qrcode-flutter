@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text field to enter data for QR code generation
+            // Text field to enter data for QR code generation as sometimes there can be mistakes we are not auto clearing but button can be added to clear
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -56,6 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => GenerateQRScreen(qrText: qrText),
+                      // In main.dart itself
                     ),
                   );
                 }
