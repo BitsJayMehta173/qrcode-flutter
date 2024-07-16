@@ -37,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
+                // (IMPORTANT) QR codes can hold up to 7,089 characters of numeric data, 4,296 characters of alphanumeric data, or 2,953 bytes (8-bit binary data) at the highest error correction level (Level H).
                 onChanged: (newText) {
                   setState(() {
                     qrText = newText;

@@ -8,8 +8,8 @@ class QRViewExample extends StatefulWidget {
 
 class _QRViewExampleState extends State<QRViewExample> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
-  Barcode? result;  // Initialize as nullable
-  QRViewController? controller;  // Initialize as nullable
+  Barcode? result;  // Initialize as nullable, Nullable variable to hold the scan result
+  QRViewController? controller;  // Initialize as nullable, Nullable variable to manage QRView's state
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class _QRViewExampleState extends State<QRViewExample> {
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller?.dispose(); // Ensures proper disposal to prevent memory leaks,release resources used by the QR code scanning
     super.dispose();
   }
 }
